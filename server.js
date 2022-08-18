@@ -16,4 +16,14 @@ app.use('/', (req, res) => {
     res.render('index.html')
 })
 
+let message = []
+
+io.on('connection', socket => {
+    console.log(`Servidor conectado: ${socket.id}`)
+
+    socket.on('sendMessage', data => {
+        messages.push(data)
+    })
+})
+
 server.listen(3000)
