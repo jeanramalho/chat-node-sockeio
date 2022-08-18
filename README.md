@@ -1,1 +1,1 @@
-# chat-node-sockeio
+# chat-node-socketio
